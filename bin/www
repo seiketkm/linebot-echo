@@ -7,12 +7,6 @@
 var app = require('../app');
 var debug = require('debug')('mylinebot:server');
 var http = require('http');
-const tlsconf = require('../tlsconf')
-const fs = require('fs');
-const tlsrawconf = {
-    key  : fs.readFileSync(tlsconf.key),
-    cert : fs.readFileSync(tlsconf.cert)
-};
 /**
  * Get port from environment and store in Express.
  */
