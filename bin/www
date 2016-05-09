@@ -6,7 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('mylinebot:server');
-var https = require('https');
+var http = require('http');
 const tlsconf = require('../tlsconf')
 const fs = require('fs');
 const tlsrawconf = {
@@ -21,10 +21,10 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
- * Create HTTPS server.
+ * Create HTTP server.
  */
 
-var server = https.createServer(tlsrawconf, app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
