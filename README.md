@@ -5,6 +5,5 @@
 上記で生成しているため冗長な作りになってる。
 
 # 利用時
-TLS/SSLはアプリケーションからは感知しない。
+TLS/SSLはLet'sEncryptの証明書が有ることを想定している
 
-http://localtunnel.me/ で動作確認。
