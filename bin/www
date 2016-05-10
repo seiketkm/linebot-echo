@@ -11,7 +11,8 @@ const tlsconf = require('../tlsconf')
 const fs = require('fs');
 const tlsrawconf = {
     key  : fs.readFileSync(tlsconf.key),
-    cert : fs.readFileSync(tlsconf.cert)
+    cert : fs.readFileSync(tlsconf.cert),
+    ca   : [fs.readFileSync(tlsconf.chain),fs.readFileSync(tlsconf.fullchain)]
 };
 /**
  * Get port from environment and store in Express.
